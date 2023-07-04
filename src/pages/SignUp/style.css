@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: min(900px, 100%);
+    width: min(1440px, 100%);
+    display: flex
+
+}
+
+.registered-message {
+    font-size: 26px;
+    color: #0B2F49;
+}
+
+.sucess-container {
+    height: 900px;
+    width: calc(1440px - 640px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.woman-sucess {
+    width:446px;
+    height:478.91px;
+}
+
+.banner-container {
+    width: 640px;
+    height: 900px;
+}

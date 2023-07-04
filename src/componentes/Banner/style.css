@@ -1,0 +1,7 @@
+.banner-container  {
+    width: 640px;
+    height: 900px;
+
+    background-size: cover;
+    background-position: center;
+}
