@@ -4,11 +4,10 @@
     box-sizing: border-box;
 }
 
-.container {
+.signup-container {
     height: min(900px, 100%);
     width: min(1440px, 100%);
     display: flex
-
 }
 
 .registered-message {
@@ -16,9 +15,10 @@
     color: #0B2F49;
 }
 
-.sucess-container {
+.signup-sucess-container {
     height: 900px;
     width: calc(1440px - 640px);
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,9 +28,4 @@
 .woman-sucess {
     width:446px;
     height:478.91px;
-}
-
-.banner-container {
-    width: 640px;
-    height: 900px;
 }

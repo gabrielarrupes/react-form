@@ -11,44 +11,32 @@ function SignUp() {
     password: "",
   });
 
-  const [error, setError] = useState("");
   const [registered, setRegistered] = useState(false);
-  const [viewPassword, setViewPassword] = useState(true);
 
   return (
-    <div className="container">
-      <div>
-        {!registered ? (
-          <Form
-            name={form.name}
-            email={form.email}
-            password={form.password}
-            form={form}
-            setForm={setForm}
-            error={error}
-            setError={setError}
-            registered={registered}
-            setRegistered={setRegistered}
-            viewPassword={viewPassword}
-            setViewPassword={setViewPassword}
-          />
-        ) : (
-          <div className="sucess-container">
-            <img
-              src={womanSuccess}
-              className="woman-sucess"
-              alt="Imagem de registro efetuado!"
-            ></img>
-            <h1 className="registered-message">
-              Cadastro efetuado com sucesso!
-            </h1>
+    <>
+      <div className="signup-container">
+          {!registered ? (
+            <Form
+              form={form}
+              setForm={setForm}
+              setRegistered={setRegistered}
+            />
+          ) : (
+            <div className="signup-sucess-container">
+              <img
+                src={womanSuccess}
+                className="woman-sucess"
+                alt="Imagem de registro efetuado!"
+              ></img>
+              <h1 className="registered-message">
+                Cadastro efetuado com sucesso!
+              </h1>
           </div>
         )}
-      </div>
-      <div className="banner-container">
         <Banner />
       </div>
-    </div>
+    </>
   );
 }
 

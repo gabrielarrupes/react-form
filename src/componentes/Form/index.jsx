@@ -1,37 +1,30 @@
 import "./style.css";
 import openEye from "../../assets/open-eye.svg";
 import closeEye from "../../assets/close-eye.svg";
+import { useState } from "react";
 
 export default function Form({
-  name,
-  email,
-  password,
-  form,
-  setForm,
-  error,
-  setError,
-  registered,
-  setRegistered,
-  viewPassword,
-  setViewPassword,
+    form,
+    setForm,
+    setRegistered,
 }) {
-  function handleOnChange(e) {
-    setError("");
-    const value = e.target.value;
 
-    setForm({ ...form, [e.target.name]: value });
+  const [viewPassword, setViewPassword] = useState(true);
+  const [error, setError] = useState("");
+
+  const handleOnChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
   }
 
-  function clearForm() {
+  const clearForm = () => {
     setForm({ name: "", email: "", password: "" });
   }
 
-  function handleSubmit(event) {
+  const handleSubmit = (event) => {
     event.preventDefault();
 
     if (!form.name || !form.email || !form.password) {
       setError("Preencha todos os campos");
-      console.log(error);
       return;
     }
 
@@ -40,11 +33,12 @@ export default function Form({
   }
 
   return (
-    <div className="sign-up-container">
+    <div className="form-container">
       <h1>Cadastre-se</h1>
       <form onSubmit={(e) => handleSubmit(e)}>
-        <div className="input-box">
+        <div className="form-input-box">
           <input
+            className="form-input"
             type="text"
             placeholder="Nome"
             value={form.name}
@@ -52,6 +46,7 @@ export default function Form({
             onChange={(e) => handleOnChange(e)}
           ></input>
           <input
+            className="form-input"
             type="e-mail"
             placeholder="E-mail"
             value={form.email}
@@ -59,6 +54,7 @@ export default function Form({
             onChange={(e) => handleOnChange(e)}
           ></input>
           <input
+            className="form-input"
             type={viewPassword ? "password" : "text"}
             placeholder="Senha"
             value={form.password}

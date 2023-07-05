@@ -1,46 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
-.sign-up-container {
+.form-container {
     height: 900px;
     width: 800px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
-    
+    align-items: center; 
 }
 
-.input-box {
+.form-input-box {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
     position: relative;
 }
 
-.input-box input {
+.form-input {
     width: 476px;
     height: 51px;
+
     padding-left: 16px;
+
     background-color: #FDFAFA;
     border: 1px solid #E8E8E8;
-    
 }
 
 .show-password {
     position: absolute;
+
     top: 128px;
     right: 12px;
     width: 20px;
     height: 40px;
+
     cursor: pointer;
 }
 
 .btn {
     width:476px;
     height: 51px;
+
     font-family: 'Roboto', sans-serif;
+
     border: none;
     border-radius: 8px;
+
     color: #E8E8E8;
     cursor: pointer;
 }
@@ -56,13 +63,17 @@
 .sign-in-btn {
     font-family: Roboto, sans-serif;
     font-size: 16px;
+
     text-decoration: none;
+
     color: black;
 }
 
 .error {
     font-size: 12px;
+
     color: red;
+    
     font-family: Roboto, sans-serif;
     font-weight: normal;
 }
